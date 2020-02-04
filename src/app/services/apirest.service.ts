@@ -11,7 +11,7 @@ export class ApirestService {
   ) { }
   
   private dataApi = {
-    url: 'http://jsonplaceholder.typicode.com/users'
+    url: 'https://jsonplaceholder.typicode.com/users'
   }
 
   
