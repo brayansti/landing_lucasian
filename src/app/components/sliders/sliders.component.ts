@@ -10,10 +10,13 @@ export class SlidersComponent implements OnInit {
 
   constructor(private service : ApirestService) { }
 
+  apiData:Array<any>;
+
   ngOnInit() {
     // this.service.getData()
     this.service.getData().subscribe( data=>{
-      console.log(data)
+      console.log(data);
+      this.apiData = data;
     } )
   }
 

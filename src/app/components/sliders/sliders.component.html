@@ -1,27 +1,42 @@
-<swiper [config]="config">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <img src="../assets/img/foto1.PNG" />
+<div class="container">
+  <swiper *ngIf="apiData" [config]="config">
+    <div class="swiper-wrapper">
+      <div *ngFor="let user of apiData" class="swiper-slide" style="background-image: url(../assets/img/foto1.PNG);">
+        <div class="layoutDefault">
+          <div class="layoutDefault__container">
+            <h3 class="layoutDefault__container_title">
+              {{user.company.catchPhrase}}
+            </h3>
+            <h4 class="layoutDefault__container_name">
+              {{user.name}}
+            </h4>
+          </div>
+        </div>
+        <div class="layoutHover">
+          <div class="layoutHover__container">
+            <div class="layoutHover__container_title">
+              <p class="font--20 font--black">
+                {{user.company.catchPhrase}}
+              </p>
+            </div>
+            <div class="layoutHover__container_name">
+              <p class="font--black font--16">
+                <strong>{{user.name}} <br> {{user.email}}</strong>
+              </p>
+            </div>
+            <div>
+              <a target="_blank" href="http://{{user.website}}" class="btn btn--square btn--blue">
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="swiper-slide">
-      <img src="../assets/img/foto2.PNG" />
-    </div>
-    <div class="swiper-slide">
-      <img src="../assets/img/foto1.PNG" />
-    </div>
-    <div class="swiper-slide">
-      <img src="../assets/img/foto2.PNG" />
-    </div>
-    <div class="swiper-slide">
-      <img src="../assets/img/foto1.PNG" />
-    </div>
-    <div class="swiper-slide">
-      <img src="../assets/img/foto2.PNG" />
-    </div>
-  </div>
-  <!-- Add Pagination -->
-  <div class="swiper-pagination"></div>
-  <!-- Add Arrows -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-</swiper>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </swiper>
+</div>
