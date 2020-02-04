@@ -1,5 +1,15 @@
 <div class="container">
-  <swiper *ngIf="apiData" [config]="config">
+  <div class="row mb30">
+    <div class="col-md-12">
+      <h2 class="font--subtitle taC">
+        Título de la sección
+      </h2>
+      <p class="taC font--20">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      </p>
+    </div>
+  </div>
+  <swiper class="mb40" *ngIf="apiData" [config]="config">
     <div class="swiper-wrapper">
       <div *ngFor="let user of apiData" class="swiper-slide" style="background-image: url(../assets/img/foto1.PNG);">
         <div class="layoutDefault">
