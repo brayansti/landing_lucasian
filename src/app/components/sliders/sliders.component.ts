@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApirestService } from "../../services/apirest.service";
 
 @Component({
   selector: 'app-sliders',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlidersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service : ApirestService) { }
 
   ngOnInit() {
+    // this.service.getData()
+    this.service.getData().subscribe( data=>{
+      console.log(data)
+    } )
   }
 
   config: any = {

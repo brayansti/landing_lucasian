@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BannerComponent } from './components/banner/banner.component';
@@ -16,7 +17,8 @@ import { SlidersComponent } from './components/sliders/sliders.component';
   ],
   imports: [
     BrowserModule,
-    Angular2UsefulSwiperModule
+    HttpClientModule,
+    Angular2UsefulSwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
