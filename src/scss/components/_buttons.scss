@@ -1,0 +1,50 @@
+
+label.btn {
+	input {
+		display: none !important;
+	}
+}
+
+.btn {
+	@include flex(center,center,nowrap,inline-flex);
+	vertical-align: middle;
+	border: 1px solid transparent;
+	outline: none;
+	text-align: center;
+	cursor: pointer;
+	@include transition;
+	font-weight: 600;
+	@include fontSize(17);
+	// Colors
+	&--blue {
+		color: $blue;
+		background: lighten($blue , 34%);
+		border-color: $white;
+		&:hover {
+			background: $blue;
+			color: $white;
+		}
+	}
+	&--green {
+		color: $green;
+		background: lighten($green , 40%);
+		border-color: $white;
+		&:hover {
+			background: $green;
+			color: $white;
+		}
+	}
+	// Shapes
+	&--circle {
+		width: 60px;
+		height: 60px;;
+		border-radius: 50%;
+		font-weight: normal;
+	}
+	// Shapes
+	&--square {
+		height: 60px;
+		padding: 5px 30px;
+		border-radius: 5px;
+	}
+}
