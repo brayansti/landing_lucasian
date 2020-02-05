@@ -34,6 +34,16 @@ export class SlidersComponent implements OnInit {
       clickable: true,
       el: '.swiper-pagination',
     },
+    breakpoints:{
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      300: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      }
+    }
   };
 
   setBgImage(index){
