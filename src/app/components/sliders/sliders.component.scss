@@ -1,3 +1,8 @@
+.slidersComponent{
+    &__sliderContainer{
+        position: relative;
+    }
+}
 .swiper-wrapper{
     .swiper-slide{
         height: 600px;
@@ -59,4 +64,14 @@
 .swiper-pagination-bullets{
     bottom: 0;
     background-color: #fff;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    .swiper-pagination-bullet{
+        &.swiper-pagination-bullet-active{
+            background: #000;
+            opacity: .2;
+        }
+    }
 }

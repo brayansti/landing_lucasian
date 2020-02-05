@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lucasian';
+
+  menuItems:object = [
+    { name:'Menu 1', url:'#'},
+    { name:'Menu 2', url:'#'},
+    { name:'Menu 3', url:'#'}
+  ]
 }

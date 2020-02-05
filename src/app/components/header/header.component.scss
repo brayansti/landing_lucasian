@@ -1,0 +1,48 @@
+@import '../../../scss/base/config';
+.headerComponent{
+    &__logo{
+        margin: 0;
+        max-width: 120px;
+        img{
+            display: block;
+        }
+    }
+    &__nav{
+        height: 100%;
+        ul{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            li{
+                a{
+                    font-size: 17px;
+                    color: $txtGray;
+                    font-weight: 100;
+                    letter-spacing: 1px;
+                    padding: 15px 5px 15px 25px;
+                    &:hover{
+                        font-weight: 400;
+                    }
+                }
+                &:after{
+                    content: "▾";
+                    color: $txtGray;
+                }
+                &:last-of-type{
+                    margin-left: 20px;
+                    &:after{
+                        display: none;
+                    }
+                }
+                .btn{
+                    height: 41px;
+                    font-size: 15px;
+                    padding: 5px 25px;
+                }
+            }
+        }
+    }
+}

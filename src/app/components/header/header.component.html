@@ -1,0 +1,23 @@
+<header class="headerComponent">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <figure class="headerComponent__logo">
+          <img src="../../../assets/img/lucasian-logo.png" alt="lucasian">
+        </figure>
+      </div>
+      <div class="col-md-7">
+        <nav class="headerComponent__nav">
+          <ul>
+            <li *ngFor="let item of menuData">
+              <a href="{{item.url}}">{{item.name}}</a>
+            </li>
+            <li>
+              <button class="btn btn--square btn--blue active">Login</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
