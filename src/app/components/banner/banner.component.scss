@@ -1,3 +1,4 @@
+@import '../../../scss/base/mediaqueries';
 .bannerComponent{
     min-height: 100vh;
     padding-top: 70px;
@@ -5,4 +6,9 @@
     background-repeat: no-repeat;
     background-position: right top;
     background-image: url('../../../assets/img/Captura.PNG');
+    @media #{$mediaMobile}{
+        min-height: initial;
+        padding-bottom: 40px;
+        background-image: unset;
+    }
 }

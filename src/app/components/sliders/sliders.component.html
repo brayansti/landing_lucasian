@@ -1,56 +1,63 @@
 <div class="SlidersComponent">
-  <div class="row mb30">
-    <div class="col-md-12">
-      <h2 class="font--subtitle taC">
-        Título de la sección
-      </h2>
-      <p class="taC font--20">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-      </p>
+  <div class="container">
+    <div class="row mb30">
+      <div class="col-md-12">
+        <div class="taC mb10">
+          <a href="" class="btn btn--square btn--square-small btn--green">Eventos</a>
+        </div>
+        <h2 class="font--subtitle taC">
+          Título de la sección
+        </h2>
+        <p class="taC font--20">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+      </div>
     </div>
   </div>
   <div class="slidersComponent__sliderContainer">
     <div class="container">
-      <swiper class="mb40" *ngIf="apiData" [config]="config">
+      <swiper class="mb20" *ngIf="apiData" [config]="config">
         <div class="swiper-wrapper">
-          <div *ngFor="let user of apiData" class="swiper-slide" style="background-image: url(../assets/img/foto1.PNG);">
-            <div class="layoutDefault">
-              <div class="layoutDefault__container">
-                <h3 class="layoutDefault__container_title">
-                  {{user.company.catchPhrase}}
-                </h3>
-                <h4 class="layoutDefault__container_name">
-                  {{user.name}}
-                </h4>
-              </div>
-            </div>
-            <div class="layoutHover">
-              <div class="layoutHover__container">
-                <div class="layoutHover__container_title">
-                  <p class="font--20 font--black">
+          <div *ngFor="let user of apiData; let i = index" class="swiper-slide">
+            <div class="swiper-slide-container" [style.background-image]="setBgImage(i)">
+              <div class="layoutDefault">
+                <div class="layoutDefault__container">
+                  <h3 class="layoutDefault__container_title">
                     {{user.company.catchPhrase}}
-                  </p>
+                  </h3>
+                  <h4 class="layoutDefault__container_name">
+                    {{user.name}}
+                  </h4>
                 </div>
-                <div class="layoutHover__container_name">
-                  <p class="font--black font--16">
-                    <strong>{{user.name}} <br> {{user.email}}</strong>
-                  </p>
-                </div>
-                <div>
-                  <a target="_blank" href="http://{{user.website}}" class="btn btn--square btn--blue">
-                    Read more
-                  </a>
+              </div>
+              <div class="layoutHover">
+                <div class="layoutHover__container">
+                  <div class="layoutHover__container_title">
+                    <p class="font--20 font--black">
+                      {{user.company.catchPhrase}}
+                    </p>
+                  </div>
+                  <div class="layoutHover__container_name">
+                    <p class="font--black font--16">
+                      <strong>{{user.name}} <br> {{user.email}}</strong>
+                    </p>
+                  </div>
+                  <div>
+                    <a target="_blank" href="http://{{user.website}}" class="btn btn--square btn--blue">
+                      Read more
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
       </swiper>
     </div>
     <!-- Add Arrows -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
   </div>
 </div>

@@ -36,4 +36,9 @@ export class SlidersComponent implements OnInit {
     },
   };
 
+  setBgImage(index){
+    let numberImg = index%2 === 0 ? 1 : 2;
+    return `url(../assets/img/foto${numberImg}.PNG)`
+  }
+
 }
